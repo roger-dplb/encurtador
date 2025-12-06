@@ -1,45 +1,61 @@
-Encurtador
-A simple URL shortener API built with ASP.NET Core. This project allows users to create, manage, and redirect shortened links. It uses Entity Framework Core for data persistence and supports Docker for easy deployment.
+# 🔗 Encurtador: Simple URL Shortener API
 
-Features
-Create short links for long URLs
-Redirect short links to original URLs
-List and manage links
-RESTful API endpoints
-Docker and Compose support
-Technologies Used
-ASP.NET Core
-Entity Framework Core
-SQLite (default, can be changed)
-Docker & Docker Compose
-Getting Started
-Prerequisites
-.NET 9 SDK
-Docker (optional)
-Setup & Run (Development)
-The API will start on the port defined in appsettings.json or launchSettings.json.
+A **simple, fast, and feature-rich URL shortener API** built with **ASP.NET Core**. This project allows users to create, manage, and track shortened links via a robust RESTful interface.
 
-Docker & Compose
-To run with Docker:
+---
 
-Or with Docker Compose:
+## ✨ Features
 
-API Endpoints
-POST /links/shorten — Create a new short link
-GET /links/{shortenCode} — Get link details
+* **Create** short links for any long URL.
+* **Redirect** short codes seamlessly to the original URLs.
+* **List and Manage** all created links.
+* **RESTful API** endpoints for easy integration.
+* **Docker & Docker Compose** support for quick deployment.
 
-See encurtador.http for example requests.
+---
 
-Migrations
-To add or update database migrations:
+## 🛠️ Technologies Used
 
-Migrations are stored in the Migrations/ folder.
+* **Backend:** ASP.NET Core
+* **Database:** Entity Framework Core (with **SQLite** as the default provider)
+* **Containerization:** Docker & Docker Compose
+* **Language:** C#
 
-Configuration
-appsettings.json — Main configuration
-appsettings.Development.json — Development overrides
-Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+---
 
-License
-This project is licensed under the MIT License.
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+* **.NET 9 SDK**
+* **Docker** (Optional, but recommended for production deployment)
+
+### Setup & Run (Development)
+
+To run the API locally without Docker:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [Your Repository URL Here]
+    cd Encurtador
+    ```
+2.  **Run the application:**
+    ```bash
+    dotnet run
+    ```
+    The API will start on the port defined in `appsettings.json` or `launchSettings.json` (typically `http://localhost:5000` or `https://localhost:5001`).
+
+### Docker & Compose
+
+#### With Docker
+
+To build and run the container directly:
+
+```bash
+# Build the image
+docker build -t encurtador .
+
+# Run the container (adjust port if needed)
+docker run -d -p 8080:80 encurtador
