@@ -38,7 +38,7 @@ To run the API locally without Docker:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [[https://github.com/roger-dplb/encurtador]]
+    git clone https://github.com/roger-dplb/encurtador
     cd Encurtador
     ```
 2.  **Run the application:**
